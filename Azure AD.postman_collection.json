@@ -1,3 +1,18 @@
+"AuthenticationServiceSettings": {
+
+"tenant": "aloremipsum.onmicrosoft.com",
+
+"tenantId": "a43c14f7-3d96-4f43-b153-1d234f259cca",
+
+"authority": "https://login.microsoftonline.com/aloremipsum.onmicrosoft.com/v2.0",
+
+"clientId": "ee0a1178-8c66-49b5-8c7a-f94005839d69",
+
+"audience": "api://ee0a1178-8c66-49b5-8c7a-f94005839d69"
+
+}
+
+
 {
 "IsEncrypted": false,
 "Values": {
