@@ -1,4 +1,22 @@
 {
+"IsEncrypted": false,
+"Values": {
+"AzureWebJobsStorage": "UseDevelopmentStorage=true",
+"FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+"AuthenticationTenant": "aloremipsum.onmicrosoft.com",
+"AuthenticationTenantId": "a43c14f7-3d96-4f43-b153-1d234f259cca",
+"AuthenticationAuthority": "https://login.microsoftonline.com/aloremipsum.onmicrosoft.com/v2.0",
+"AuthenticationClientId": "ee0a1178-8c66-49b5-8c7a-f94005839d69",
+"AuthenticationAudience": "api://ee0a1178-8c66-49b5-8c7a-f94005839d69"
+},
+"Host": {
+"CORS": "*"
+}
+}
+
+
+
+{
 	"info": {
 		"_postman_id": "be42f626-ba51-4486-8124-6bc9eac92e76",
 		"name": "Azure AD",
