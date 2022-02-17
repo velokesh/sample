@@ -1,0 +1,36 @@
+Step1: Install common service package using following command in Package manage console:
+       Install-Package Costco.I18n.Depot.CommonServices -version 1.1.14-dev
+
+Step2: Add refernce to middleware in program.cs file (order of middleware important)
+		
+	.ConfigureFunctionsWorkerDefaults(worker => {
+                    worker.UseMiddleware<AuthorizationMiddleware>();
+                    worker.UseMiddleware<ExceptionMiddleware>();
+         })
+	
+
+Step3: Decorate the function app with Authorize
+	[Authorize(Permissions = new[] { "Anonymous" })]
+
+	Inside function app, you can access campus and depot Id as
+	var campusId = context.Items["CampusId"];
+        var depotId = context.Items["DepotId"];
+	
+	Note: If permission is set to Anonymous and bearer token is empty, then campus and depot id will be set to null
+
+Local Settings change:
+
+{
+  "ConnectionStrings": {
+    "ConnectionString": "Server=win2019-vm010\\SQLEXPRESS;Database=CostcoDB;Trusted_Connection=True",
+    "MiddlewareDbString": "Server=win2019-vm010\\SQLEXPRESS;Database=CostcoDB;Trusted_Connection=True" (Add this)
+  },
+  // Add this
+  "Values": {
+    "AuthenticationTenant": "aadadmincostco.onmicrosoft.com",
+    "AuthenticationTenantId": "7cacbdfd-ebad-46c0-8d1e-b7058ce44173",
+    "AuthenticationAuthority": "https://login.microsoftonline.com/aadadmincostco.onmicrosoft.com/v2.0",
+    "AuthenticationClientId": "d17c3d94-6a55-4b8f-8b4e-ff7c04d3714d",
+    "AuthenticationAudience": "api://d17c3d94-6a55-4b8f-8b4e-ff7c04d3714d"
+  }
+}
