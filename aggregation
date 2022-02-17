@@ -1,0 +1,21 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+  },
+  "Host": {
+    "LocalHttpPort": 7073
+  },
+  "ConnectionStrings": {
+    "Database": "Data Source=win2019-vm020\\SQLEXPRESS; Initial Catalog=localDB;Trusted_Connection=True",
+    //"Database": "Server=tcp:costco-depot-db-server.database.windows.net,1433;Initial Catalog=i18n-depot-db;Persist Security Info=False;User ID=costco;Password=Depot@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    "DoorSetup": "https://costcoi18ndepotdoorapi.azurewebsites.net/api/doormanagement/v1/",
+    "SystemSetup": "https://costcoi18ndepotsystemsetupapi.azurewebsites.net/api/systemsetup/v1/",
+    //"GetAllAppointments": "https://costcoi18ndepotappointment.azurewebsites.net/api/appointments/"
+    "GetAllAppointments": "http://localhost:7071/api/appointments/",
+    "GetConflicts": "http://localhost:7071/api/appointments/doorConflicts",
+    "GetShipToWarehouseById": "https://costcoi18ndepotsystemsetupapi.azurewebsites.net/api/systemsetup/v1/shiptowarehouse/",
+    "GetDoors": "https://costcoi18ndepotdoorapi.azurewebsites.net/api/doormanagement/v1/doors"
+  }
+}
