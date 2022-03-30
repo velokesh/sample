@@ -8,7 +8,7 @@ export const environment = {
       applicationName: 'Depot UI',
       autoTrackPageVisitTime: true
     },
-    baseURL: 'https://localhost:44366',
+    baseURL: 'https://apim-depot-dev-poc.azure-api.net',
     mockBaseURL: 'http://localhost:3000',
     msal: {
       tenantId: '7cacbdfd-ebad-46c0-8d1e-b7058ce44173',
